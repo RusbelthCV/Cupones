@@ -25,7 +25,7 @@ class addCupon extends Component {
             caducidad: this.state.caducidad,
             descripcion: this.state.descripcion,
             foto: "airbnb",
-            valor: this.state.precio,
+            valor: this.state.valor,
             enVenta: 1,
             usuario: this.state.idpropietario,
         };
@@ -46,7 +46,7 @@ class addCupon extends Component {
             ok: false,
             error: error
         }));
-
+        this.props.history.push('/');
     }
     change(e) {
         this.setState({

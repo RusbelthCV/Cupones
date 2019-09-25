@@ -6,6 +6,9 @@ import Nav from './Nav';
 import Registro from './Registro';
 import Login from './Login';
 import addCupon from './addCupon';
+import ownCupones from './ownCupones';
+import Cupon from './Cupon';
+
 import { CookiesProvider, withCookies } from 'react-cookie';
 import { BrowserRouter, NavLink, Switch, Route } from "react-router-dom";
 import { connect } from 'react-redux';
@@ -60,6 +63,8 @@ class App extends React.Component {
             <Route path="/registro" component={Registro} />
             <Route path = "/login" component = {Login} />
             <Route path = "/addCupon" component = {addCupon} />
+            <Route path = "/misCupones" component = {ownCupones} />
+            <Route path = "/edit" component = {Cupon} />
           </Switch>
 
         </div>

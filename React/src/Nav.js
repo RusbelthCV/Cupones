@@ -60,7 +60,7 @@ class Nav extends React.Component {
         if (this.props.cookies.get('rcc_token')) {
             msgLog = <div className="btn-group botones">
                 <NavLink to="/addCupon" className="btn btn-primary mx-1 rounded">Subir Cupón</NavLink>
-                <NavLink to="/ownCupones" className="btn btn-primary mx-1 rounded">Mis Cupones</NavLink>
+                <NavLink to="/misCupones" className="btn btn-primary mx-1 rounded">Mis Cupones</NavLink>
                 <NavLink to="/profile" className="btn btn-primary mx-1 rounded">Perfil</NavLink>
                 <button className="btn btn-primary mx-1 rounded" onClick={this.logOut}>LogOut</button>
             </div>
