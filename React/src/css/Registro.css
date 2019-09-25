@@ -1,0 +1,27 @@
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+hr{
+    width: 100vw;
+}
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+<<<<<<< HEAD
+=======
+}
+.errorEmail{
+    border-color: red;
+}
+.errorEmailMsg{
+    color:red;
+}
+.errorEdad{
+    color:red;
+}
+.errorInEdad{
+    border-color:red;
+>>>>>>> Cookies
+}
