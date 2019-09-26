@@ -1,7 +1,10 @@
 .editar {
     color: green;
 }
-
 .basura {
     color: red
+}
+img {
+    height: auto;
+    width: 10vw;
 }

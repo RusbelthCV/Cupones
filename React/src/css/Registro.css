@@ -8,9 +8,7 @@ hr{
 }
 .bigicon {
     font-size: 35px;
-    color: #36A0FF;
-<<<<<<< HEAD
-=======
+    color: #BF4B67;
 }
 .errorEmail{
     border-color: red;
@@ -23,5 +21,10 @@ hr{
 }
 .errorInEdad{
     border-color:red;
->>>>>>> Cookies
+}
+.boton {
+    background-color: #BF4B67;
+}
+.form-group {
+    margin-left: 10vw;
 }

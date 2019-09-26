@@ -3,7 +3,7 @@ import React from 'react';
 
 import './css/Registro';
 
-import { Redirect } from 'react-router-dom';
+import { Redirect , NavLink } from 'react-router-dom';
 
 import md5 from 'md5';
 
@@ -136,10 +136,13 @@ class Registro extends React.Component {
                             <input type="password" className="form-control" name="password" value={this.state.password} onChange={this.escribirPassword} />
                         </div>
                     </div>
-                    <div className="form-group">
-                        <div className="col-md-12 text-center">
+                    <div className="form-group d-flex justify-content-center botones">
+                        <div className="text-center">
                             <button type="submit" className="btn btn-primary btn-lg">Submit</button>
                         </div>
+                        <NavLink to="/" className="ml-5 btn btn-success btn-lg">
+                            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                        </NavLink>
                     </div>
                     {/*====================================
                                 Mensaje de inserción correcta 

@@ -33,43 +33,53 @@ class Nav extends React.Component {
         this.props.enviar(text);
     }
     logOut() {
-        let token =  this.props.cookies.get('rcc_idusuari');
+        let token = this.props.cookies.get('rcc_idusuari');
         console.log(token);
         const API = "http://localhost:3000";
         let url = API + "/api/usuario/logout";
-        fetch(url , {
+        fetch(url, {
             method: "DELETE",
-            headers: new Headers({'Content-Type': 'application/json'}),
-            body: JSON.stringify({token})
+            headers: new Headers({ 'Content-Type': 'application/json' }),
+            body: JSON.stringify({ token })
         })
-        .then(res => {
-            console.log(res.json());
-            this.props.cookies.remove('rcc_nomusuari');
-            this.props.cookies.remove('rcc_idusuari');
-            this.props.cookies.remove('rcc_token');
-            this.props.dispatch({
-                type: 'LOGOUT'
-            });
-        })
-        .catch(error => console.log(error));
+            .then(res => {
+                console.log(res.json());
+                this.props.cookies.remove('rcc_nomusuari');
+                this.props.cookies.remove('rcc_idusuari');
+                this.props.cookies.remove('rcc_token');
+                this.props.dispatch({
+                    type: 'LOGOUT'
+                });
+            })
+            .catch(error => console.log(error));
 
-       
+
     }
     render() {
         let msgLog = "";
         if (this.props.cookies.get('rcc_token')) {
             msgLog = <div className="btn-group botones">
-                <NavLink to="/addCupon" className="btn btn-primary mx-1 rounded">Subir Cupón</NavLink>
-                <NavLink to="/misCupones" className="btn btn-primary mx-1 rounded">Mis Cupones</NavLink>
-                <NavLink to="/profile" className="btn btn-primary mx-1 rounded">Perfil</NavLink>
-                <button className="btn btn-primary mx-1 rounded" onClick={this.logOut}>LogOut</button>
+                <div className="d-flex align-items-center ml-3 mr-3 " >
+                    <NavLink to="/addCupon" className="btn btn-outline-primary  rojo-secundario fuente-principal shadow-none text-nowrap">Subir Cupón</NavLink>
+                </div>
+                <div className="d-flex align-items-center ml-3 mr-3 " >
+                    <NavLink to="/misCupones" className="btn btn-outline-primary  rojo-secundario fuente-principal shadow-none text-nowrap">Mis Cupones</NavLink>
+                </div>
+                <div className="d-flex align-items-center ml-3 mr-3 " >
+                    <NavLink to="/profile" className="btn btn-outline-primary  rojo-secundario fuente-principal shadow-none text-nowrap">Perfil</NavLink>
+                </div>
+                <button className="btn btn-outline-primary  rojo-secundario fuente-principal shadow-none text-nowrap" onClick={this.logOut}>LogOut</button>
             </div>
         }
         else {
             console.log("TOKEN NO CREADO");
-            msgLog = <div className="btn-group botones">
-                <NavLink to="/registro" className="btn btn-primary mx-1 rounded">Registrarse</NavLink>
-                <NavLink to="/login" className="btn btn-primary mx-1 rounded">Iniciar Sesión</NavLink>
+            msgLog = <div className="btn-group">
+                <div className="d-flex align-items-center ml-3 mr-3 " >
+                    <NavLink to="/registro" className="btn btn-outline-primary  rojo-secundario fuente-principal shadow-none text-nowrap" type="submit">Registrarse</NavLink>
+                </div>
+                <div className="d-flex align-items-center ml-3 mr-3 " >
+                    <NavLink to="/login" className="btn btn-outline-primary  rojo-secundario fuente-principal shadow-none text-nowrap" type="submit">Iniciar Sesión</NavLink>
+                </div>
             </div>
 
         }

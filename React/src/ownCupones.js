@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withCookies } from 'react-cookie';
 import { connect } from 'react-redux';
-import {Redirect} from 'react-router-dom';
+import {Redirect , NavLink} from 'react-router-dom';
 import './css/ownCupones';
 
 
@@ -64,7 +64,7 @@ class ownCupones extends Component {
                     {el.descripcion}
                 </td>
                 <td>
-                    <img src={"http://localhost:3000/img/" + el.foto + ".png"} />
+                    <img src={"http://localhost:3000/uploads/" + el.foto} />
                 </td>
                 <td>
                     {el.valor}
@@ -104,6 +104,9 @@ class ownCupones extends Component {
                         </tr>
                         {cupones}
                     </table>
+                    <NavLink to = "/" className = "ml-5 btn btn-success btn-lg">
+                        <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                    </NavLink>
                 </div>
             </div>
         );

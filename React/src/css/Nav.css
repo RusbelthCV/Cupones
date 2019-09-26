@@ -1,3 +1,170 @@
-.nav{
-    width: 100vw;
-}
+
+
+body{
+
+    background: #F4F1EA;
+  }
+  
+  
+  .nav{
+      width: 100vw;
+  }
+  .banner{
+  
+      height: 244px;
+      background-image: url("../img/Recurso3@2x.png");
+      background-size: cover;
+      position : absolute ;
+    left : 0px;
+    top : 327px;
+    width : 100%;
+    height : 244px;
+    z-index: -1;
+      
+    
+      
+      
+  }
+  
+  
+  .input-principal{
+  
+    height: 42px;
+    background: #E2DFD7;
+    border-radius: 9px;
+    border-color:  #E2DFD7;
+    min-width: 100px;
+    margin-left: 20px;
+    margin-right: 5px;
+  }
+  .input-principal:focus{
+  
+    height: 42px;
+    background: #E2DFD7;
+    border-radius: 6px;
+    border-color:  #D83D69;
+    border-width: 2px;
+    min-width: 100px;
+  }
+  
+  
+  
+  .rojo{
+    background : #BF4B67;
+    border-color: #BF4B67;
+    color : #F4F1EA;
+    border-radius : 6px;
+    height : 41px;
+    margin-left: 4px;
+    margin-right: 4px;
+    
+  }
+  
+  
+  
+  .rojo:hover{
+  
+    background: #D83D69;
+    border-color: #D83D69;
+  }
+  
+  .rojo:active{
+  
+    background: #892B46 !important;
+    border-color: #892B46 !important;
+  }
+  
+  
+  .size-icono{
+    width : 41px;
+    height : 41px;
+  
+  }
+  
+  .size-pequeño{
+    height : 26px !important;
+  }
+  
+  .rojo-secundario{
+    
+    border-color: #BF4B67;
+    color : #BF4B67;
+    border-radius : 6px;
+    height : 41px;
+    border-width : 2px;
+    
+  }
+  
+  .rojo-select{
+  
+    border-color: #BF4B67;
+    color : #BF4B67;
+    background-color: #F4F1EA;
+    border-width: 2px;
+    margin-top:10px;
+  
+  }
+  
+  
+  .rojo-select:focus{
+  
+    border-color: #BF4B67;
+    color : #BF4B67;
+    background-color: #F4F1EA;
+    border-width: 2px;
+    margin-top:10px;
+  
+  }
+  
+  
+  .rojo-secundario:hover{
+  
+    background: #D83D69;
+    border-color: #D83D69;
+  }
+  
+  .rojo-secundario:active{
+  
+    background: #892B46 !important;
+    border-color: #892B46 !important;
+  }
+  
+  .placeholder-destacado{
+  
+    background : #E2DFD7;
+    background : rgba(226, 223, 215, 1);
+    width : 181px;
+    height : 181px;
+    border-radius : 7px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .placeholder{
+  
+    background : #E2DFD7;
+    width : 181px;
+    height : 181px;
+    border-radius : 7px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 40px;
+  }
+  
+  .footerFinal{
+  
+    background: #BF4B67;
+    width: 100%;
+    height: 200px;
+    
+  }
+  
+  .Redes{
+    background: #F4F1EA;
+    width: 200px;
+    height: 42px;
+  }
+  
+  .w-15{
+    width: 10% !important;
+  }

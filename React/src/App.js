@@ -8,6 +8,7 @@ import Login from './Login';
 import addCupon from './addCupon';
 import ownCupones from './ownCupones';
 import Cupon from './Cupon';
+import dataCupon from './dataCupon';
 
 import { CookiesProvider, withCookies } from 'react-cookie';
 import { BrowserRouter, NavLink, Switch, Route } from "react-router-dom";
@@ -65,6 +66,7 @@ class App extends React.Component {
             <Route path = "/addCupon" component = {addCupon} />
             <Route path = "/misCupones" component = {ownCupones} />
             <Route path = "/edit" component = {Cupon} />
+            <Route path = "/cupon" component = {dataCupon} />
           </Switch>
 
         </div>
