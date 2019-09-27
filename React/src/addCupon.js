@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { withCookies } from 'react-cookie';
 import { connect } from 'react-redux';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 class addCupon extends Component {
     constructor(props) {
         super(props);
@@ -48,7 +49,7 @@ class addCupon extends Component {
                 ok: false,
                 error: error
             }));
-        this.props.history.push('/');
+            this.props.history.push('/');
     }
     change(e) {
         if (e.target.name == 'foto') {
@@ -89,13 +90,14 @@ class addCupon extends Component {
                     <div className="form-group">
                         <label htmlFor="propietario">Propietario: </label>
                         <input type="text" className="form-control" value={this.state.propietario} name="propietario" id="propietario" disabled />
+                        <input type = "hidden" value = {this.props.cookies.get('rcc_idusuari')} name = "usuario" />
                     </div>
-                    <div className="form-group">
+                    {/* <div className="form-group">
                         <label htmlFor="foto">Propietario: </label>
                         <input type="file" className="form-control" name="foto" id="foto" onChange={this.change} />
-                    </div>
+                    </div> */}
                     <button className="btn btn-lg btn-success" type="submit">Publicar</button>
-                    <NavLink to = "/" className = "ml-5 btn btn-success btn-lg">
+                    <NavLink to="/" className="ml-5 btn btn-success btn-lg">
                         <i class="fa fa-home fa-2x" aria-hidden="true"></i>
                     </NavLink>
                 </form>

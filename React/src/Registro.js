@@ -19,7 +19,7 @@ class Registro extends React.Component {
             errorEmail: 'd-none',
             inputEdad: '',
             errorEdad: 'd-none',
-            succes: 'd-none'
+            succes: 'd-none',
         }
         this.escribirNombre = this.escribirNombre.bind(this);
         this.escribirEmail = this.escribirEmail.bind(this);
@@ -33,7 +33,9 @@ class Registro extends React.Component {
             nombre: this.state.nombre,
             email: this.state.email,
             password: md5(this.state.password),
-            nacimiento: this.state.fecha
+            nacimiento: this.state.fecha,
+            admin: 0
+            
         }
         const API = "http://localhost:3000";
         fetch(API + '/api/usuario/create', {
