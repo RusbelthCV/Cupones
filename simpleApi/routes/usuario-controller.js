@@ -71,6 +71,23 @@ router.post('/create', (req, res) => {
     }
 });
 
+router.get('/:id', (req,res) => {
+    let id = req.params.id;
+    if(id) {
+        model.Usuario.findOne({
+            where: {
+                _uuid: id
+            }
+        })
+        .then(usuario => res.json({
+            ok: true,
+            data:usuario
+        }))
+
+    }
+});
+
+
 router.post('/login',(req,res) => {
     model.Usuario.findOne({where: {
         [Op.and]: [{email: req.body.email},{password: req.body.password}]
